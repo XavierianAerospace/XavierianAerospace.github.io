@@ -1,0 +1,51 @@
+<nav class="navbar">
+  <div class="navbar-container">
+    <div class="navbar-logo">
+      <a routerLink="/">
+        <img src="assets/images/logo.svg" alt="XAE Logo">
+
+      </a>
+      <div class="logo-text">XAE</div>
+    </div>
+
+    <ul class="navbar-menu">
+      <li ></li>
+
+
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.route" routerLinkActive="active" [routerLinkActiveOptions]="{exact: true}">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+
+    <div class="server-status" title="Estado del servidor">
+      <span class="status-dot"></span>
+    </div>
+
+    <div class="navbar-auth">
+      <button class="btn-login" *ngIf="!isAuthenticated">
+        Iniciar Sesión
+      </button>
+      <button class="btn-profile" *ngIf="isAuthenticated">
+        Perfil
+      </button>
+    </div>
+
+    <button class="hamburger" (click)="toggleMenu()" [class.active]="menuOpen">
+      <span></span>
+      <span></span>
+      <span></span>
+    </button>
+  </div>
+
+  <div class="menu-movil" [class.open]="menuOpen">
+    <ul>
+      <li *ngFor="let item of menuItems">
+        <a [routerLink]="item.route" (click)="toggleMenu()">
+          {{ item.label }}
+        </a>
+      </li>
+    </ul>
+  </div>
+</nav>

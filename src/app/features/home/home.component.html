@@ -1,0 +1,60 @@
+<div class="home-container">
+  <section class="hero-banner">
+    <div class="hero-overlay"></div>
+    <div class="hero-content">
+      <h1 class="hero-title">
+        <span class="title-line">Xavierian</span>
+        <span class="title-line">Aerospace</span>
+        <span class="title-line">Engineering</span>
+      </h1>
+      <p class="hero-subtitle">
+        Desarrollando el futuro de la exploración espacial desde la Pontificia Universidad Javeriana
+      </p>
+      <div class="hero-actions">
+        <button class="btn-primary">Explorar Proyectos</button>
+        <button class="btn-secondary">Únete al Semillero</button>
+      </div>
+    </div>
+    <div class="hero-scanlines"></div>
+  </section>
+
+  <section class="stats-section">
+    <div class="stats-container">
+      <div class="stat-card" *ngFor="let stat of stats">
+        <div class="stat-value">{{ stat.value }}</div>
+        <div class="stat-label">{{ stat.label }}</div>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="welcome-section">
+    <div class="section-content">
+      <h2 class="section-title">Bienvenido a XAE</h2>
+      <div class="section-border"></div>
+      <p class="section-text">
+        Xaverian Aerospace Engineering (XAE) es un semillero de investigación y desarrollo conformado por estudiantes, investigadores y profesionales de la Facultad de Ingeniería de la Pontificia Universidad Javeriana. Nuestro propósito es impulsar el desarrollo de la ingeniería aeroespacial en Colombia mediante iniciativas lideradas por estudiantes, con proyección y reconocimiento a nivel nacional e internacional.
+      </p>
+      <p class="section-text">
+        Nos enfocamos en fortalecer la formación técnica, investigativa y humana de nuestros miembros a través de proyectos reales, mentoría continua y espacios de intercambio académico. De esta manera, contribuimos al avance del conocimiento, al desarrollo tecnológico del país y a la formación de profesionales capaces de enfrentar los retos del sector aeroespacial global.
+      </p>
+    </div>
+  </section>
+
+
+  <section class="featured-section">
+    <div class="section-content">
+      <h2 class="section-title">Proyectos Destacados</h2>
+      <div class="section-border"></div>
+      <p class="section-subtitle">Conoce los proyectos más recientes del semillero</p>
+      
+      <div class="projects-grid ">
+        <div class="project-placeholder" *ngFor="let i of [1,2,3]">
+          <div class="placeholder-icon">img</div>
+          <h3>Proyecto {{ i }}</h3>
+          <p>Descripción del proyecto disponible próximamente</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>

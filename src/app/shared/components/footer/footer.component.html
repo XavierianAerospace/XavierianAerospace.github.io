@@ -1,0 +1,66 @@
+<footer class="footer">
+  <div class="footer-grid-pattern"></div>
+
+  <div class="footer-content">
+    <div class="footer-section">
+      <h3 class="footer-title">Xavierian Aerospace Engineering</h3>
+      <p class="footer-description">
+        Semillero de investigación en ingeniería aeroespacial de la Pontificia Universidad
+        Javeriana. Desarrollando el futuro de la exploración espacial.
+      </p>
+    </div>
+
+    <div class="footer-section">
+      <h4 class="section-title">Enlaces Rápidos</h4>
+      <ul class="footer-links">
+        <li *ngFor="let link of quickLinks">
+          <a [href]="link.url">{{ link.label }}</a>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4 class="section-title">Contacto</h4>
+      <ul class="contact-list">
+        <li>
+          <span class="contact-icon">📧</span>
+          <a [href]="'mailto:' + contactInfo.email">{{ contactInfo.email }}</a>
+        </li>
+        <li>
+          <span class="contact-icon">📞</span>
+          <span>{{ contactInfo.phone }}</span>
+        </li>
+        <li>
+          <span class="contact-icon">📍</span>
+          <span>{{ contactInfo.address }}</span>
+        </li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4 class="section-title">Síguenos</h4>
+      <div class="social-links">
+        <a
+          *ngFor="let social of socialLinks"
+          [href]="social.url"
+          [title]="social.name"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="social-icon"
+          >
+          
+          <ng-icon [name]="social.icon" size="22"></ng-icon>
+
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <div class="footer-border"></div>
+    <p class="copyright">
+      © {{ currentYear }} Xaverian Aerospace Engineering (XAE) - Pontificia Universidad Javeriana. Todos los derechos
+      reservados.
+    </p>
+  </div>
+</footer>

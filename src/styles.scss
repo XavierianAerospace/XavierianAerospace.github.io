@@ -1,1 +1,94 @@
-/* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&family=Montserrat:wght@300;400;600&family=Roboto+Mono:wght@300;400&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --color-bg-primary: #0a0a0f;
+  --color-bg-secondary: #1a1a2e;
+  --color-accent-primary: #00ffff;
+  --color-accent-secondary: #ffaa00;
+  --color-text-primary: #e0e0e0;
+  --color-text-secondary: #888888;
+  --color-border: #333344;
+  --color-success: #00ff88;
+  --color-error: #ff3366;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: var(--color-bg-primary);
+  color: var(--color-text-primary);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button {
+  font-family: inherit;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', sans-serif;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-accent-primary);
+  border-radius: 5px;
+
+  &:hover {
+    background: var(--color-accent-secondary);
+  }
+}
+
+::selection {
+  background: rgba(0, 255, 255, 0.3);
+  color: var(--color-text-primary);
+}
+
+
+
+/* test */
+body::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: repeating-linear-gradient(
+    0deg,
+    rgba(0, 255, 255, 0.03) 0px,
+    transparent 2px,
+    transparent 4px
+  );
+  pointer-events: none;
+  z-index: 1000;
+  animation: scanlines 20s linear infinite;
+}
+
+@keyframes scanlines {
+  0% { transform: translateY(0); }
+  100% { transform: translateY(100px); }
+}
